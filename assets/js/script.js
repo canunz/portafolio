@@ -1,4 +1,4 @@
-/*=================================== toggle icon navbar ===================================*/
+/*==========================================================================*/
 
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -8,7 +8,7 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active')
 }
 
-/*=================================== scroll section active link===================================*/
+/*==========================================================================*/
 
 let sections = document.querySelector('sections');
 let navLinks = document.querySelector('header nav a');
@@ -29,12 +29,12 @@ window.onscroll = () => {
 
     });
 
-    /*=================================== sticky navbar ===================================*/
+    /*========================================================================*/
     
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 100);
 
-    /*=================================== remove toggle icon and navbar===================================*/
+    /*=======================================================================*/
 
     menuIcon.classList.remove('fa-xmark');
     navbar.classList.remove('active');
@@ -42,7 +42,7 @@ window.onscroll = () => {
 
 };
 
-/*=================================== remove toggle icon and navbar===================================*/
+/*============================================================================*/
 
 ScrollReveal({
     distance: '80px',
@@ -108,20 +108,24 @@ form.addEventListener('submit', function(event) {
     return;
   }
 
-  //Enviar formulario
+  //Envio el formulario
   form.submit();
 });
 
-// Obtener todos los enlaces de portafolio
+// Obtengo todos los enlaces del portafolio
 const portfolioLinks = document.querySelectorAll('.portfolio-link');
 
-// Agregar un event listener a cada enlace
+// Agrego un event listener a cada enlace
 portfolioLinks.forEach(link => {
   link.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
-    const url = link.getAttribute('href'); // Obtener la URL del enlace
+    event.preventDefault(); // Prevengo el comportamiento predeterminado del enlace
+    const url = link.getAttribute('href'); // Obtengo la URL del enlace
     
-    // Redirigir al usuario a la URL correspondiente
+    // Se redirige al usuario de la URL correspondiente
     window.location.href = url;
   });
 });
+
+
+
+

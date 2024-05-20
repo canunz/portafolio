@@ -57,7 +57,7 @@ section{
 }
 
 .logo img{
-    width: 59px;
+    width: 54px;
 }
 
 .navbar a{
@@ -161,16 +161,25 @@ span{
     box-shadow: none;
 }
 
+/* Oculto la sección de servicios en dispositivos móviles */
+@media (max-width: 768px) {
+    .servicios {
+      display: none;
+    }
+  }
+
 .sobremi{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    height: -100rem;
     background: var(--backgrd-color);
 }
 
 .sobremi-img img{
-    width: 29vw;
+    width: 28vw;
+    margin-top: 2rem;
 }
 
 .heading{
@@ -194,6 +203,7 @@ span{
 
 .servicios h2{
     margin-bottom: 5rem;
+    margin-top: 4rem;
 }
 
 .servicios-container{
@@ -243,14 +253,29 @@ span{
 }
 
 .portafolio h2{
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
+    margin-top: 9rem;
 }
 
-.portafolio-container{
-   display: grid; 
-   grid-template-columns: repeat(3, 1fr);
-   align-items: center;
-   gap: 2.5rem;
+.portafolio-container {
+    display: grid;
+    border-radius: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 50px; 
+    justify-items: center; 
+}
+
+.portafolio-box {
+    width: 250px; /* Fija el ancho de los cuadros */
+    height: 200px; /* Fija la altura de los cuadros */
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .portafolio-container .portafolio-box{
@@ -258,12 +283,12 @@ span{
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
-    height: 90%;
+    height: 100%;
     display: flex;
 }
 
 .portafolio-box img{
-    width: 100%;
+    width: 90%;
     transition: .5s ease;
 }
 
@@ -293,13 +318,13 @@ span{
 }
 
 .portafolio-layer h4{
-    color: #fff;
+    color: #fff7f7;
     font-size: 3rem;
 }
 
 .portafolio-layer p{
-    color: #fff;
-    font-size: 1.6rem;
+    color: #ffffff;
+    font-size: 1.2rem;
     margin: .3rem 0 1rem;
 }
 
@@ -315,7 +340,7 @@ span{
 
 .portafolio-layer a i{
     font-size: 2rem;
-    color: var(--snd-bf-color);
+    color: var(--snd-bf-color);  
 }
 
 .headingg{
@@ -522,3 +547,4 @@ span{
         width: 100%;
     }
 }
+
